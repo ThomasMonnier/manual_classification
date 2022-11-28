@@ -94,6 +94,6 @@ if __name__ == "__main__":
                     next = st.button('Next', on_click=action)
                 
                 else:
-                    st.info('All invoices have been processed ({} invoices)'.format(len(uploaded_files)))
+                    st.info('All invoices have been processed ({} invoice{})'.format(len(uploaded_files), 's'*(len(uploaded_files)>1)))
 
             progress_bar.progress(int(100 * (st.session_state.index + 1) / len(uploaded_files)))
